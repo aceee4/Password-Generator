@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Clipboard, Check, RefreshCw, Eye, EyeOff } from "lucide-react"
+import { Clipboard, Check, RefreshCw, Eye, EyeOff, Github } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -39,12 +39,12 @@ export default function PasswordGenerator() {
   const [requireAll, setRequireAll] = useState(true)
   const [customCharset, setCustomCharset] = useState("")
   const [useCustomCharset, setUseCustomCharset] = useState(false)
-  
+
   const [copied, setCopied] = useState(false)
   const [passwordVisible, setPasswordVisible] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  
+
   useEffect(() => {
     generatePassword()
   }, [])
@@ -246,8 +246,7 @@ export default function PasswordGenerator() {
               </div>
             </CardContent>
           </Card>
-        )}
-
+          
         <Card className="bg-[#1c1c1c] border-[#2c2c2c] text-white">
           <CardHeader>
             <CardTitle>Options</CardTitle>
@@ -368,7 +367,7 @@ export default function PasswordGenerator() {
                           htmlFor="exclude-ambiguous"
                           className={`text-white ${useCustomCharset ? "opacity-50" : ""}`}
                         >
-                          Exclude ambiguous characters {"{"} {"}"}[ ]( )\/'"` ~,;:.{"<"} {">"}
+                          Exclude ambiguous characters {"{"} {"}"}[ ]( ){"\\"}/'"` ~,;:.{"<"} {">"}
                         </Label>
                       </div>
                     </div>
@@ -435,6 +434,18 @@ export default function PasswordGenerator() {
             </Button>
           </CardFooter>
         </Card>
+        
+        <div className="fixed bottom-4 right-4 z-50 bg-[#0c0c0c]/80 px-2 py-1 rounded-md backdrop-blur-sm">
+          <a 
+            href="https://github.com/aceee4" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center text-gray-400 hover:text-purple-400 transition-colors text-sm"
+          >
+            <Github className="h-4 w-4 mr-1" />
+            <span>aceee4</span>
+          </a>
+        </div>
       </div>
     </div>
   )

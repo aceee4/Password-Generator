@@ -2,6 +2,8 @@
 
 A secure, customizable password generator with advanced options and strength analysis.
 
+![Password Generator Screenshot](/placeholder.svg?height=400&width=800&query=dark%20themed%20password%20generator%20application%20interface%20with%20strength%20meter)
+
 ## Features
 
 - Generate secure passwords with customizable options
@@ -12,30 +14,27 @@ A secure, customizable password generator with advanced options and strength ana
 - Entropy calculation and crack time estimation
 - Responsive design for all devices
 
-# Live Demo
-- [Click Here](https://advanced-password-gen.vercel.app/)
-
 ## Installation
 
 1. Clone the repository:
-```bash
+\`\`\`bash
 git clone https://github.com/aceee4/password-generator.git
 cd password-generator
-```
+\`\`\`
 
 2. Install dependencies:
-```bash
+\`\`\`bash
 npm install
 # or
 yarn install
-```
+\`\`\`
 
 3. Run the development server:
-```bash
+\`\`\`bash
 npm run dev
 # or
 yarn dev
-```
+\`\`\`
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
@@ -45,9 +44,9 @@ The password generator provides a RESTful API endpoint that you can use to gener
 
 ### API Endpoint
 
-```
+\`\`\`
 POST /api/generate-password
-```
+\`\`\`
 
 ### Request Parameters
 
@@ -59,7 +58,7 @@ POST /api/generate-password
 | `numbers` | boolean | true | Include numbers (0-9) |
 | `symbols` | boolean | true | Include symbols (!@#$%^&*()_-+=<>?/) |
 | `excludeSimilar` | boolean | false | Exclude similar characters (i, l, 1, L, o, 0, O) |
-| `excludeAmbiguous` | boolean | false | Exclude ambiguous characters ({, }, [, ], (, ), /, , ', ", `, ~, ,, ;, :, <, >) |
+| `excludeAmbiguous` | boolean | false | Exclude ambiguous characters ({, }, [, ], (, ), /, \, ', ", `, ~, ,, ;, :, <, >) |
 | `requireAll` | boolean | true | Require at least one character from each selected type |
 | `useCustomCharset` | boolean | false | Use a custom character set instead of the predefined ones |
 | `customCharset` | string | "" | Custom character set to use when `useCustomCharset` is true |
@@ -68,7 +67,7 @@ POST /api/generate-password
 
 The API returns a JSON object with the following properties:
 
-```typescript
+\`\`\`typescript
 {
   password: string;           // The generated password
   strength: number;           // Password strength score (0-100)
@@ -82,7 +81,7 @@ The API returns a JSON object with the following properties:
     symbols: boolean;
   }
 }
-```
+\`\`\`
 
 ### Error Responses
 
@@ -93,17 +92,17 @@ The API may return the following error responses:
 
 Error responses have the following format:
 
-```typescript
+\`\`\`typescript
 {
   error: string;  // Error message
 }
-```
+\`\`\`
 
 ### Example API Usage
 
 #### Basic Usage
 
-```javascript
+\`\`\`javascript
 // Example using fetch API
 const response = await fetch('/api/generate-password', {
   method: 'POST',
@@ -121,11 +120,11 @@ const response = await fetch('/api/generate-password', {
 
 const data = await response.json();
 console.log(data.password); // The generated password
-```
+\`\`\`
 
 #### Advanced Usage
 
-```javascript
+\`\`\`javascript
 // Example with advanced options
 const response = await fetch('/api/generate-password', {
   method: 'POST',
@@ -146,11 +145,11 @@ const response = await fetch('/api/generate-password', {
 
 const data = await response.json();
 console.log(data);
-```
+\`\`\`
 
 #### Custom Character Set
 
-```javascript
+\`\`\`javascript
 // Example with custom character set
 const response = await fetch('/api/generate-password', {
   method: 'POST',
@@ -166,7 +165,7 @@ const response = await fetch('/api/generate-password', {
 
 const data = await response.json();
 console.log(data.password); // Password with only hex characters
-```
+\`\`\`
 
 ## Password Strength Analysis
 
@@ -188,9 +187,9 @@ The strength is categorized as:
 
 Password entropy is calculated using the formula:
 
-```
+\`\`\`
 Entropy = L * log2(R)
-```
+\`\`\`
 
 Where:
 - L is the length of the password
