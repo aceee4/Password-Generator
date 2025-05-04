@@ -12,8 +12,8 @@ A secure, customizable password generator with advanced options and strength ana
 - Entropy calculation and crack time estimation
 - Responsive design for all devices
 
-# DEMO
-- [Live Demo](https://advanced-password-gen.vercel.app/)
+# Live Demo
+- [Click Here](https://advanced-password-gen.vercel.app/)
 
 ## Installation
 
