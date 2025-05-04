@@ -246,7 +246,8 @@ export default function PasswordGenerator() {
               </div>
             </CardContent>
           </Card>
-          
+        )}
+
         <Card className="bg-[#1c1c1c] border-[#2c2c2c] text-white">
           <CardHeader>
             <CardTitle>Options</CardTitle>
@@ -367,7 +368,7 @@ export default function PasswordGenerator() {
                           htmlFor="exclude-ambiguous"
                           className={`text-white ${useCustomCharset ? "opacity-50" : ""}`}
                         >
-                          Exclude ambiguous characters {"{"} {"}"}[ ]( )\/'"` ~,;:.{"<"} {">"}
+                          Exclude ambiguous characters {"{"} {"}"}[ ]( ){"\\"}/'"` ~,;:.{"<"} {">"}
                         </Label>
                       </div>
                     </div>
@@ -434,11 +435,11 @@ export default function PasswordGenerator() {
             </Button>
           </CardFooter>
         </Card>
-        
+
         <div className="fixed bottom-4 right-4 z-50 bg-[#0c0c0c]/80 px-2 py-1 rounded-md backdrop-blur-sm">
-          <a 
-            href="https://github.com/aceee4" 
-            target="_blank" 
+          <a
+            href="https://github.com/aceee4"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-gray-400 hover:text-purple-400 transition-colors text-sm"
           >
