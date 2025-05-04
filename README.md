@@ -2,8 +2,6 @@
 
 A secure, customizable password generator with advanced options and strength analysis.
 
-![Password Generator Screenshot](/placeholder.svg?height=400&width=800&query=dark%20themed%20password%20generator%20application%20interface%20with%20strength%20meter)
-
 ## Features
 
 - Generate secure passwords with customizable options
