@@ -367,7 +367,7 @@ export default function PasswordGenerator() {
                           htmlFor="exclude-ambiguous"
                           className={`text-white ${useCustomCharset ? "opacity-50" : ""}`}
                         >
-                          Exclude ambiguous characters {"{"} {"}"}[ ]( ){"\\"}/'"` ~,;:.{"<"} {">"}
+                          Exclude ambiguous characters {"{"} {"}"}[ ]( )\/'"` ~,;:.{"<"} {">"}
                         </Label>
                       </div>
                     </div>
